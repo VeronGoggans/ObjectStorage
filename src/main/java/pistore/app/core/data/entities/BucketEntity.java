@@ -1,10 +1,11 @@
 package pistore.app.core.data.entities;
-
-
 import jakarta.persistence.*;
 import pistore.app.core.domain.enums.StorageTier;
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.UUID;
+
+
 
 @Entity
 @Table(name = "buckets")
@@ -19,12 +20,16 @@ public class Bucket {
     private StorageTier storageTier;
     private Integer objectCount = 0;
     private Double size = 0.0;
+    @Column(name = "user_id")
+    private UUID userId;
+
 
     public Bucket() {}
 
-    public Bucket(String name, StorageTier storageTier) {
+    public Bucket(String name, StorageTier storageTier, UUID userId) {
         this.name = name;
         this.storageTier = storageTier;
+        this.userId = userId;
         this.id = UUID.randomUUID();
     }
 
@@ -50,5 +55,9 @@ public class Bucket {
 
     public Double getSize() {
         return size;
+    }
+
+    public UUID getUserId() {
+        return userId;
     }
 }
