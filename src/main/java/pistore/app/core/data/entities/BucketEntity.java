@@ -1,19 +1,24 @@
 package pistore.app.core.data.entities;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 import pistore.app.core.domain.enums.StorageTier;
 import java.time.LocalDateTime;
-import java.util.List;
 import java.util.UUID;
 
 
 
 @Entity
 @Table(name = "buckets")
-public class Bucket {
+@Getter @Setter @AllArgsConstructor
+public class BucketEntity {
     @Id
     private UUID id;
     @Column(nullable = false, updatable = false)
     private final LocalDateTime createdAt = LocalDateTime.now();
+    @Column(nullable = false)
+    private LocalDateTime modifiedAt = LocalDateTime.now();
     @Column(nullable = false)
     private String name;
     @Column(nullable = false)
@@ -23,41 +28,12 @@ public class Bucket {
     @Column(name = "user_id")
     private UUID userId;
 
+    public BucketEntity() {}
 
-    public Bucket() {}
-
-    public Bucket(String name, StorageTier storageTier, UUID userId) {
+    public BucketEntity(String name, StorageTier storageTier, UUID userId) {
         this.name = name;
         this.storageTier = storageTier;
         this.userId = userId;
         this.id = UUID.randomUUID();
-    }
-
-    public UUID getId() {
-        return id;
-    }
-
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public StorageTier getStorageTier() {
-        return storageTier;
-    }
-
-    public Integer getObjectCount() {
-        return objectCount;
-    }
-
-    public Double getSize() {
-        return size;
-    }
-
-    public UUID getUserId() {
-        return userId;
     }
 }

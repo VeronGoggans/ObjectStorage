@@ -1,0 +1,21 @@
+.wrapper {
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    background: url(../../assets/HomeCloud_background_image.jpeg) no-repeat;
+    background-size: cover;
+}
+
+.login-container {
+    background-color: var(--background-color);
+    height: fit-content;
+    border-radius: 20px;
+    margin-right: 100px;
+    padding: 50px 80px;
+    row-gap: 30px;
+}
+
+.login-container button {
+    width: fit-content;
+}

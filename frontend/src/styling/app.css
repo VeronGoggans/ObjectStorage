@@ -1,0 +1,18 @@
+.app-wrapper {
+    height: 100dvh;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    background-color: var(--background-color);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.app-content {
+    padding: 20px 7%;
+}
+
+

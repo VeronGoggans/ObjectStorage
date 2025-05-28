@@ -11,7 +11,7 @@ import java.util.UUID;
 @Entity
 @Table(name = "objects")
 @Getter @Setter @AllArgsConstructor
-public class FileEntity {
+public class ObjectEntity {
     @Id
     private UUID id;
     @Column(nullable = false)
@@ -22,9 +22,9 @@ public class FileEntity {
     @Column(name = "bucket_id")
     private UUID bucketId;
 
-    public FileEntity() {}
+    public ObjectEntity() {}
 
-    public FileEntity(String filename, String filepath, Double size) {
+    public ObjectEntity(String filename, String filepath, Double size) {
         this.filename = filename;
         this.filepath = filepath;
         this.size = size;

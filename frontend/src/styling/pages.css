@@ -1,0 +1,10 @@
+
+/*_____________________ Home Page _____________________*/
+
+
+.home-page {
+    height: calc(100dvh - 40px);
+    display: grid;
+    grid-template-rows: 100px 1fr;
+}
+

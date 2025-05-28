@@ -1,0 +1,44 @@
+/*_____________________ Profile Card _____________________*/
+
+.profile-card {
+    background-color: var(--profile-card-bg);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.profile-card #user-icon {
+    color: var(--primary-text-color);
+    font-size: 20px;
+}
+
+
+/*_____________________ Searchbar _____________________*/
+.searchbar {
+    position: relative;
+    display: block;
+    border-radius: 30px;
+    background-color: var(--searchbar-bg);
+}
+
+.searchbar input {
+    background-color: transparent;
+    padding: 15px 80px 15px 50px;
+    border-radius: 30px;
+    width: 100%;
+}
+
+.searchbar #search-icon {
+    position: absolute;
+    top: 14px;
+    left: 20px;
+    color: var(--primary-text-color);
+}
+
+.searchbar-keybinding {
+    position: absolute;
+    top: 17px;
+    right: 20px;
+    font-size: 12px;
+}

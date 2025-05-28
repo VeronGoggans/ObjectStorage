@@ -1,9 +1,9 @@
-package pistore.app.core.application;
+package pistore.app.core.application.services;
 
 import org.springframework.stereotype.Service;
 import pistore.app.core.application.exceptions.ResourceNotFoundException;
 import pistore.app.core.application.exceptions.UserNotFoundException;
-import pistore.app.core.data.entities.Bucket;
+import pistore.app.core.data.entities.BucketEntity;
 import pistore.app.core.data.repositories.BucketRepository;
 import pistore.app.core.domain.enums.StorageTier;
 import pistore.app.core.presentation.dtos.BucketDTO;
@@ -29,7 +29,7 @@ public class BucketService {
     public BucketDTO addBucket(String name, StorageTier storageTier, UUID userId) throws UserNotFoundException {
         userService.checkIfUserExists(userId);
 
-        Bucket bucket = bucketRepository.save(new Bucket(name, storageTier, userId));
+        BucketEntity bucket = bucketRepository.save(new BucketEntity(name, storageTier, userId));
         return BucketDTO.build(bucket);
     }
 
@@ -47,9 +47,9 @@ public class BucketService {
     public BucketDTO updateBucket(UUID bucketId, UUID userId) throws UserNotFoundException, ResourceNotFoundException {
         userService.checkIfUserExists(userId);
 
-        Optional<Bucket> optionalBucket = bucketRepository.findById(bucketId);
+        Optional<BucketEntity> optionalBucket = bucketRepository.findById(bucketId);
         if (optionalBucket.isPresent()) {
-            Bucket bucket = optionalBucket.get();
+            BucketEntity bucket = optionalBucket.get();
             // Update and return the bucket
             return BucketDTO.build(bucketRepository.save(bucket));
         }

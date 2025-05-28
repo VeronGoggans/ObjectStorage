@@ -1,4 +1,8 @@
 package pistore.app.core.data.database;
 
-public class DatanaseConnection {
+
+public class DatabaseConnection {
+    public static void main(String[] args) {
+
+    }
 }

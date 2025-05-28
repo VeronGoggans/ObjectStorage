@@ -1,4 +1,4 @@
-package pistore.app.config.components.security;
+package pistore.app.config.security;
 
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;

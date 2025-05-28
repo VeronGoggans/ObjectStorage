@@ -1,0 +1,231 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Poppins;
+}
+
+body {
+    width: 100dvw;
+    height: 100dvh;
+    max-width: 100dvw;
+    max-height: 100dvh;
+    overflow-x: hidden;
+}
+
+
+.lightmode {
+
+    --background-color: #ffffff;
+    --sidebar-bg: #191E3A;
+    --profile-card-bg: #F4F4F8;
+    --searchbar-bg: #F4F4F8;
+
+    --primary-text-color: #000000;
+    --secondary-text-color: #89889A; 
+    --teritary-text-color: #B0B3C1;
+
+    --logo-bg: #636AF3;
+    
+    --btn1-bg: #636AF3;
+    --btn2-bg: #636AF3;
+    --btn1-bg-hover: #4a54c4;
+    --btn2-bg-hover: #4a54c4;
+    --btn1-bg-active: #636AF3;
+    --btn2-bg-active: #27283b;
+
+    --input1-bg: #F4F4F8;
+    --input1-active-shadow: 5px 5px 20px rgba(147, 151, 167, 0.1);
+    --input2-bg: #e8e8ee;
+    --input-placeholder-color: #b5b8c8;
+    --input-bg-focus: #636AF3;
+    --input-bg-hover: #4a54c4;
+
+    --paragrapgh-soft-color: #B0B3C1;
+
+    --link-color: #636AF3;
+}
+
+.darkmode {
+
+    --background-color: #0E0F1A;
+    --sidebar-bg: #12131F;
+    --profile-card-bg: #191C2E;
+    --searchbar-bg: #191C2E;
+
+    --primary-text-color: #ffffff;
+    --secondary-text-color: #C4C3DD; 
+    --teritary-text-color: #B0B3C1;
+
+    --btn1-bg: #636AF3;
+    --btn2-bg: #636AF3;
+    --btn1-bg-hover: #4a54c4;
+    --btn2-bg-hover: #4a54c4;
+    --btn1-bg-active: #636AF3;
+    --btn2-bg-active: #27283b;
+
+    --input1-bg: #191C2E;
+    --input1-active-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+    --input2-bg: #2a2e41;
+    --input-placeholder-color: #B0B3C1;
+    --input-bg-focus: #636AF3;
+    --input-bg-hover: #4a54c4;
+
+    --paragrapgh-soft-color: #C4C3DD;
+
+    --link-color: #636AF3;
+    
+}
+
+
+/* __________________ Typograhpy __________________*/
+h1, h2, h3, h4, p {
+    color: var(--primary-text-color);
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+p.soft {
+    color: var(--paragrapgh-soft-color);
+}
+
+p.soft-bold {
+    color: var(--paragrapgh-soft-color);
+    font-weight: 600;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    width: fit-content;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* __________________ Buttons __________________*/
+button {
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: background-color 0.2s ease, scale 0.1s ease-in-out;
+}
+
+button.tab {
+    border-radius: 30px;
+    color: #ffffff;
+    background-color: transparent;
+}
+
+button.btn1 {
+    border-radius: 30px;
+    background-color: var(--btn1-bg);
+    color: #ffffff;
+}
+
+button.btn1:hover,
+button.tab:hover {
+    background-color: var(--btn1-bg-hover);
+}
+
+button.btn1:active,
+button.tab:active {
+    background-color: var(--btn1-bg-active);
+    scale: 1.05;
+}
+
+button.btn2 {
+    border-radius: 5px;
+    background-color: var(--btn1-bg);
+    color: #ffffff;
+}
+
+button.btn2:hover {
+    background-color: var(--btn2-bg-hover);
+}
+
+button.btn2:active {
+    background-color: var(--btn2-bg-active);
+    scale: 0.95;
+}
+/* __________________ Inputs __________________*/
+
+input {
+    outline: none;
+    border: none;
+    font-size: 14px;
+    padding: 15px 30px;
+    color: var(--primary-text-color);
+    transition: 
+    background-color 0.2s ease, 
+    scale 0.2s ease-in-out, 
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+input::placeholder {
+    color: var(--input-placeholder-color);
+}
+
+.input1 {
+    border-radius: 12px;
+    background-color: var(--input1-bg);
+    border-bottom: 3px solid var(--input2-bg);
+}
+
+.input1:focus {
+    box-shadow: var(--input1-active-shadow);
+    border-color: var(--input-bg-focus);
+}
+
+.input1:hover {
+    border-color: var(--input-bg-hover);
+}
+
+.input2 {
+    background-color: transparent;
+    border-bottom: 2px solid var(--input2-bg);
+}
+
+.input2:hover {
+    border-color: var(--input-bg-hover);
+}
+
+.input2:focus {
+    border-color: var(--input-bg-focus);
+}
+
+
+/* __________________ Containers __________________*/
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
