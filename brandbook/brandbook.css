@@ -14,9 +14,18 @@ body {
 }
 
 
-.lightmode {
+:root {
+    --app-color: #636AF3;
+    --blue1: #4E4EFF;
+    --blue2: #3E3EB6;
+    --blue3: #4A4FAC;
+    --blue4: #1B1B74;
+}
 
+
+.lightmode {
     --background-color: #ffffff;
+    --soft-grey: #F4F4F8;
     --sidebar-bg: #191E3A;
     --profile-card-bg: #F4F4F8;
     --searchbar-bg: #F4F4F8;
@@ -24,8 +33,6 @@ body {
     --primary-text-color: #000000;
     --secondary-text-color: #89889A; 
     --teritary-text-color: #B0B3C1;
-
-    --logo-bg: #636AF3;
     
     --btn1-bg: #636AF3;
     --btn2-bg: #636AF3;
@@ -48,6 +55,7 @@ body {
 
 .darkmode {
 
+    --soft-grey: #191C2E;
     --background-color: #0E0F1A;
     --sidebar-bg: #12131F;
     --profile-card-bg: #191C2E;
@@ -109,6 +117,11 @@ p.soft {
 p.soft-bold {
     color: var(--paragrapgh-soft-color);
     font-weight: 600;
+}
+
+p.bold {
+    font-weight: 600;
+    color: var(--primary-text-color);
 }
 
 a {

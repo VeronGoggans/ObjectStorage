@@ -1,9 +1,9 @@
-.sidebar {
+homecloud-sidebar{
     background-color: var(--sidebar-bg);
     padding: 10px 20px;
 }
 
-.sidebar h3 {
+homecloud-sidebar h3 {
     color: #fff;
 }
 
@@ -19,7 +19,7 @@
     width: 45px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-right: 30px;
+    margin-right: 20px;
     margin-bottom: 9px;
     column-gap: 5px;
 }
@@ -28,14 +28,14 @@
     margin-top: auto;
     width: 25px;
     height: 25px;
-    background-color: var(--logo-bg);
+    background-color: var(--app-color);
     border-radius: 5px;
 }
 
 .logo-container .square2 {
     width: 15px;
     height: 15px;
-    background-color: var(--logo-bg);
+    background-color: var(--app-color);
     border-radius: 5px;
 }
 

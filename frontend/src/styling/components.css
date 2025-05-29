@@ -1,0 +1,81 @@
+/*_____________________ Notification Components _____________________*/
+user-notification {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+}
+
+user-notification .user-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--soft-grey);
+}
+
+user-notification .user-circle i {
+    color: var(--primary-text-color);
+}
+
+user-notification .notification {
+    position: relative;
+    background-color: var(--soft-grey);
+    padding: 20px;
+    border-radius: 5px 20px 20px 20px;
+}
+
+user-notification .notify-date,
+app-notification .notify-date {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 12px;
+}
+
+user-notification .user-action,
+app-notification .app-action {
+    padding-top: 20px;
+    font-size: 14px;
+}
+
+user-notification .user-message,
+app-notification .app-message {
+    padding-top: 20px;
+    font-size: 12px;
+}
+
+user-notification .unread-indicator,
+app-notification .unread-indicator {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--blue1);
+    border-radius: 50%;
+    top: -2px;
+    left: -2px;
+}
+
+app-notification {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 80px;
+    background-color: var(--blue2);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+app-notification p {
+    color: #fff;
+}
+
+user-notification .notification,
+app-notification {
+    transition: scale 0.2s ease-in-out;
+    width: fit-content;
+    max-width: 600px;
+}
+
+user-notification .notification:hover,
+app-notification:hover {
+    scale: 1.05;
+}
+

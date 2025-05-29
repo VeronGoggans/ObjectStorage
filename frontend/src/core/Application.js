@@ -6,11 +6,14 @@ import '../styling/app.css';
 import '../styling/defualt.css';
 import '../styling/pages.css';
 import '../styling/sidebar.css';
+import '../styling/components.css';
 import '../../../brandbook/brandbook.css';
 
 
 
 export const router = new Router(); 
+export let pageTitle = null;
+
 
 async function startApplication()
 {
@@ -18,4 +21,8 @@ async function startApplication()
 }
 
 
-startApplication();
+document.addEventListener('DOMContentLoaded', () => {
+    pageTitle = document.querySelector('.page-title');
+    startApplication()
+});
+

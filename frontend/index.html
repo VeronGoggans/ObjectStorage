@@ -17,26 +17,10 @@
 </head>
 <body class="lightmode">
     <div class="app-wrapper">
-        <div class="sidebar">
-            <div class="logo-container">
-                <div class="logo">
-                    <div class="square1"></div>
-                    <div class="square2"></div>
-                </div>
-                <h3>HomeCloud</h3>
-            </div>
-            <div class="sidebar-tabs flex-column">
-                <button class="tab active-tab"><i class="bi bi-house-fill"></i> <span>Home</span></button>
-                <button class="tab"><i class="bi bi-bucket-fill"></i><span>My buckets</span></button>
-                <button class="tab"><i class="bi bi-people-fill"></i><span>Shared with me</span></button>
-                <button class="tab"><i class="bi bi-bell-fill"></i><span>Notifications</span></button>
-                <button class="tab"><i class="bi bi-trash3-fill"></i><span>Trash</span></button>
-                <button class="tab"><i class="bi bi-database-fill"></i><span>Storage</span></button>
-            </div>
-        </div>
+        <homecloud-sidebar></homecloud-sidebar>
         <main class="app-content">
             <div class="header">
-                <h3 class="page-title">Welcome back <span class="page-subsection"></span></h3>
+                <h3 class="page-title">Welcome to HomeCloud! <span class="page-subsection"></span></h3>
                 <div class="profile-card flex-center">
                     <i id="user-icon" class="bi bi-person-fill"></i>
                 </div>
@@ -48,5 +32,6 @@
     </div>
 
     <script type="module" src="./src/core/Application.js"></script>
+    <script type="module" src="./src/core/Components.js"></script>
 </body>
 </html>

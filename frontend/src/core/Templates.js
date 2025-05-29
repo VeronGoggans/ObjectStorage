@@ -1,18 +1,15 @@
-const homeTemplate = `
-<div class="home-page">
-    <div class="content">
-        <div class="searchbar">
-            <i id="search-icon" class="bi bi-search"></i>
-            <input type="text" placeholder="Search for files, buckets, or users...">
-            <p class="searchbar-keybinding soft">Ctrl+Y</p>
-        </div>
-    </div>
-</div>
-`
+const homeTemplate = '<home-page></home-page>';
+const storageTemplate = '<storage-page></storage-page>';
+const notificationsTemplate = '<notifications-page></notifications-page>';
 
 
 export const pageTemplates = {
 
-    home: homeTemplate
+    home: homeTemplate,
+    my_buckets: null,
+    shared_with_me: null,
+    notifications: notificationsTemplate,
+    trash: null,
+    storage: storageTemplate,
 
 }

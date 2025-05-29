@@ -8,3 +8,85 @@
     grid-template-rows: 100px 1fr;
 }
 
+
+/*_____________________ Storage Page _____________________*/
+storage-page {
+    display: grid;
+    grid-template-rows: 150px 1fr;
+    height: calc(100dvh - 100px);
+}
+
+storage-page h4 {
+    font-weight: 500;
+}
+
+.storage-headers {
+    justify-content: center;
+}
+
+.storage-usage-bar {
+    position: relative;
+    width: 100%;
+    height: 20px;
+    display: flex;
+    border-radius: 25px;
+    background-color: var(--soft-grey);
+}
+
+.storage-usage-bar > div {
+    position: absolute;
+    height: 100%;
+    border-radius: 25px;
+}
+
+.document-usage {
+    z-index: 3;
+    background-color: var(--blue1);
+    width: 40%;
+}
+
+.image-usage {
+    z-index: 2;
+    background-color: var(--blue2);
+    width: 50%;
+}
+
+.video-usage {
+    z-index: 1;
+    background-color: var(--blue4);
+    width: 60%;
+}
+
+.usage-tag {
+    position: absolute;
+    font-weight: 500;
+    top: 40px;
+    right: 0;
+}
+
+.storage-types {
+    row-gap: 40px;
+}
+
+.storage-types .color-blob {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.storage-types .storage-type {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+}   
+
+.storage-types .document-type .color-blob {background-color: var(--blue1)}
+.storage-types .image-type .color-blob {background-color: var(--blue2)}
+.storage-types .video-type .color-blob {background-color: var(--blue4)}
+
+
+/*_____________________ Notifications Page _____________________*/
+.notifications {
+    padding-top: 50px;
+    row-gap: 30px;
+}

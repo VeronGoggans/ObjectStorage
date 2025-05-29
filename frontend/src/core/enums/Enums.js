@@ -8,3 +8,25 @@ export const PageIds = {
     STORAGE: 'storage',
 
 }
+
+
+export const PageComponentNames = {
+
+    HomePage: 'home-page',
+    MyBucketsPage: 'my-buckets-page',
+    SharedWithMePage: 'shared-with-me-page',
+    NotificationsPage: 'notifications-page',
+    TrashPage: 'trash-page',
+    StoragePage: 'storage-page',
+
+}
+
+
+export const NotificationComponentNames = {
+
+    UserNotification: 'user-notification',
+    AppNotification: 'app-notification',
+    
+} 
+
+
