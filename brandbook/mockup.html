@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../frontend/src/styling/sidebar.css">
     <link rel="stylesheet" href="../frontend/src/styling/pages.css">
     <link rel="stylesheet" href="../frontend/src/styling/components.css">
-    <link rel="stylesheet" href="brandbook.css">
+    <link rel="stylesheet" href="./brandbook.css">
     
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
@@ -24,7 +24,7 @@
 </head>
 <body class="lightmode">
     <div class="app-wrapper">
-        <div class="sidebar">
+        <homecloud-sidebar>
             <div class="logo-container">
                 <div class="logo">
                     <div class="square1"></div>
@@ -40,15 +40,37 @@
                 <button class="tab"><i class="bi bi-trash3-fill"></i><span>Trash</span></button>
                 <button class="tab"><i class="bi bi-database-fill"></i><span>Storage</span></button>
             </div>
-        </div>
+        </homecloud-sidebar>
         <main class="app-content">
             <div class="header">
-                <h3 class="page-title">Notifications<span class="page-subsection"></span></h3>
+                <h3 class="page-title">Shared With Me<span class="page-subtitle soft">3 results</span></h3>
                 <div class="profile-card flex-center">
                     <i id="user-icon" class="bi bi-person-fill"></i>
                 </div>
             </div>
-            <div class="page"></div>
+            <div class="page">
+                <my-buckets-page>
+                    <button class="add-bucket-btn btn2">Add bucket</button>
+                    <div class="my-buckets-table">
+                        <div class="my-buckets-header">
+                            <p></p>
+                            <p class="soft">#</p>
+                            <p class="soft">Name</p>
+                            <p class="soft">Shared with</p>
+                            <p class="soft">Capacity</p>
+                            <p class="soft">Size</p>
+                            <p class="soft">Date & Time</p>
+                        </div>
+                        <div class="my-buckets-content">
+                            <bucket-item>
+                                
+                            </bucket-item>
+
+                        </div>
+                    </div>
+
+                </my-buckets-page>
+            </div>
         </main>
     </div>
 

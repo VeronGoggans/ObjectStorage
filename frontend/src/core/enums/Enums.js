@@ -30,3 +30,12 @@ export const NotificationComponentNames = {
 } 
 
 
+export const TableComponentNames = {
+
+    SharedItem: 'shared-item',
+    BucketItem: 'bucket-item',
+    TrashItem: 'trash-item',
+    ObjectItem: 'object-item',
+
+}
+

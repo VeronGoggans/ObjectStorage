@@ -13,6 +13,7 @@ import '../../../brandbook/brandbook.css';
 
 export const router = new Router(); 
 export let pageTitle = null;
+export let pageSubtitle = null;
 
 
 async function startApplication()
@@ -23,6 +24,7 @@ async function startApplication()
 
 document.addEventListener('DOMContentLoaded', () => {
     pageTitle = document.querySelector('.page-title');
+    pageSubtitle = document.querySelector('.page-subtitle');
     startApplication()
 });
 

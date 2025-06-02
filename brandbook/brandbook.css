@@ -20,6 +20,7 @@ body {
     --blue2: #3E3EB6;
     --blue3: #4A4FAC;
     --blue4: #1B1B74;
+    --blue5: #96B3FF;
 }
 
 
@@ -110,7 +111,8 @@ h4 {
     font-weight: 400;
 }
 
-p.soft {
+p.soft,
+span.soft {
     color: var(--paragrapgh-soft-color);
 }
 

@@ -79,3 +79,75 @@ app-notification:hover {
     scale: 1.05;
 }
 
+
+/*_____________________ Shared Item Component _____________________*/
+shared-item {
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: .25fr 2fr 1fr 1fr;
+    cursor: pointer;
+    transition: background-color 200ms ease-in-out;
+}
+
+shared-item:hover {
+    background-color: var(--soft-grey);
+}
+
+shared-item p {
+    font-size: 14px;
+}
+
+shared-item .item-name {
+    margin: auto 0;
+}
+
+shared-item .index {
+    font-weight: 600;
+    margin: auto 0;
+}
+
+shared-item .shared-item-owner-container {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+shared-item .date-time {
+    font-size: 12px;
+    margin: auto 0;
+}
+
+
+/*_____________________ Bucket Item Component _____________________*/
+bucket-item {
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: .25fr .3fr 1.5fr 1fr .5fr .5fr .6fr;
+    cursor: pointer;
+    transition: background-color 200ms ease-in-out;
+}
+
+bucket-item:hover {
+    background-color: var(--soft-grey);
+}
+
+bucket-item .index {
+    font-weight: 600;
+}
+
+bucket-item p {
+    font-size: 14px;
+    margin: auto 0;
+}
+
+bucket-item .size {
+    font-weight: 600;
+}
+
+bucket-item input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    margin: auto 0;
+}

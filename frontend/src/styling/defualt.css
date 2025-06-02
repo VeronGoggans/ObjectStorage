@@ -13,6 +13,17 @@
     font-size: 20px;
 }
 
+.table-user-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--soft-grey);
+}
+
+.table-user-circle i {
+    color: var(--primary-text-color);
+}
+
 
 /*_____________________ Searchbar _____________________*/
 .searchbar {
