@@ -1,3 +1,7 @@
+import { router } from "../Application.js"
+import { PageIds } from "../enums/Enums.js";
+
+
 export class SharedItem extends HTMLElement {
     constructor() {
         super();
@@ -43,6 +47,8 @@ export class BucketItem extends HTMLElement {
     connectedCallback() 
     {
         this.render();
+        this.#elements();
+        this.#events();
         this.determineSizeColor();
     }
 
@@ -74,4 +80,78 @@ export class BucketItem extends HTMLElement {
             this.querySelector('.size').style.color = 'var(--blue3';
         }
     }
+
+    #elements()
+    {
+        this.input = this.querySelector('input[type="checkbox"')
+    }
+
+    #events()
+    {
+        this.addEventListener('dblclick', () => router.routeTo({pageId: PageIds.OBJECTS}));
+        this.input.addEventListener('change', (event) => highlightItem(event, this));
+    }
 }
+
+
+export class ObjectItem extends HTMLElement {
+    constructor() {
+        super();
+    }
+
+    insertData(data)
+    {
+        this.data = data;
+    }
+
+    connectedCallback() 
+    {
+        this.render();
+        this.#elements();
+        this.#events();
+    }
+
+    render() 
+    {
+        this.innerHTML = `
+            <input type="checkbox">
+            <p class="index">1</p>
+            <p class="name">Family Pictures</p>
+            <div class="shared-with-container">
+                <div class="table-user-circle flex-center">
+                    <i id="user-icon" class="bi bi-person-fill"></i>
+                </div>
+            </div>
+            <p class="extention">.png</p>
+            <p class="size">4mb</p>
+            <p class="date-time">2 May 2020 12:05</p>
+        `
+    }
+
+    #elements()
+    {
+        this.input = this.querySelector('input[type="checkbox"')
+    }
+
+    #events()
+    {
+        this.input.addEventListener('change', (event) => highlightItem(event, this));
+    }
+}
+
+
+
+
+/**
+ * 
+ * @param { Event } event 
+ * @param { Element } item 
+ */
+function highlightItem(event, item)
+    {
+        if (event.target.checked) {
+            item.style.backgroundColor = 'var(--selected)';
+        } else {
+            item.style.backgroundColor = '';
+        }
+    }

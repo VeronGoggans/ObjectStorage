@@ -52,6 +52,7 @@ body {
     --paragrapgh-soft-color: #B0B3C1;
 
     --link-color: #636AF3;
+    --selected: #d9dbff;
 }
 
 .darkmode {
@@ -83,6 +84,7 @@ body {
     --paragrapgh-soft-color: #C4C3DD;
 
     --link-color: #636AF3;
+    --selected: #24264b;
     
 }
 
@@ -190,7 +192,7 @@ input {
     outline: none;
     border: none;
     font-size: 14px;
-    padding: 15px 30px;
+    padding: 10px 30px;
     color: var(--primary-text-color);
     transition: 
     background-color 0.2s ease, 

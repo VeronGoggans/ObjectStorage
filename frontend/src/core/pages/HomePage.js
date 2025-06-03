@@ -24,13 +24,14 @@ export class HomePage extends HTMLElement {
     #template()
     {
         return `
-            <div class="content">
+            <div class="home-header">
                 <div class="searchbar">
                     <i id="search-icon" class="bi bi-search"></i>
                     <input type="text" placeholder="Search for files, buckets, or users...">
                     <p class="searchbar-keybinding soft">Ctrl+Y</p>
                 </div>
             </div>
+            <div class="content"></div>
         `
     }
 

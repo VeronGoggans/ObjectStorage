@@ -2,6 +2,7 @@ export const PageIds = {
 
     HOME: 'home',
     MY_BUCKETS: 'my_buckets',
+    OBJECTS: 'objects',
     SHARED_WITH_ME: 'shared_with_me',
     NOTIFICATIONS: 'notifications',
     TRASH: 'trash',
@@ -18,6 +19,8 @@ export const PageComponentNames = {
     NotificationsPage: 'notifications-page',
     TrashPage: 'trash-page',
     StoragePage: 'storage-page',
+    ObjectsPage: 'objects-page',
+    PropertiesPage: 'properties-page'
 
 }
 
@@ -36,6 +39,13 @@ export const TableComponentNames = {
     BucketItem: 'bucket-item',
     TrashItem: 'trash-item',
     ObjectItem: 'object-item',
+
+}
+
+
+export const PageUtilComponentNames = {
+
+    BucketNavigation: 'bucket-navigation'
 
 }
 

@@ -43,33 +43,37 @@
         </homecloud-sidebar>
         <main class="app-content">
             <div class="header">
-                <h3 class="page-title">Shared With Me<span class="page-subtitle soft">3 results</span></h3>
+                <h3 class="page-title">Figma design<span class="page-subtitle soft">Objects</span></h3>
                 <div class="profile-card flex-center">
                     <i id="user-icon" class="bi bi-person-fill"></i>
                 </div>
             </div>
             <div class="page">
-                <my-buckets-page>
-                    <button class="add-bucket-btn btn2">Add bucket</button>
-                    <div class="my-buckets-table">
-                        <div class="my-buckets-header">
-                            <p></p>
-                            <p class="soft">#</p>
-                            <p class="soft">Name</p>
-                            <p class="soft">Shared with</p>
-                            <p class="soft">Capacity</p>
-                            <p class="soft">Size</p>
-                            <p class="soft">Date & Time</p>
+                <properties-page>
+                    <bucket-navigation></bucket-navigation>
+                    <div class="properties-container">
+                        <div class="overview-container">
+                            <h3>Overview</h3>
+                            <p>Objects <span class="soft">6</span></p>
+                            <p>Capacity <span class="soft">100mb</span></p>
+                            <p>Size <span class="soft">39.5mb</span></p>
+                            <p>Storage left <span class="soft">60.5mb</span></p>
+                            <p>Last accessed <span class="soft">27 April 2025  14:35</span></p>
+                            <p>Created at <span class="soft">26 April 2025  14:45</span></p>
+                            <p>Encryption <span class="soft">AES 256</span></p>
+                            <p>Logging <button class="btn2">Enabled</button></p>
                         </div>
-                        <div class="my-buckets-content">
-                            <bucket-item>
-                                
-                            </bucket-item>
-
+                        <div class="email-container">
+                            <h3>Email notifications</h3>
+                            <p class="soft">Receive emails about important events tied to your account, buckets and objects.</p>
+                            <div class="email-input-container">
+                                <p>Receiving email</p>
+                                <input type="text" class="input1" placeholder="example@gmail.com">
+                            </div>
+                            <p>Emails <button class="btn2">Disabled</button></p>
                         </div>
                     </div>
-
-                </my-buckets-page>
+                </properties-page>
             </div>
         </main>
     </div>
