@@ -140,6 +140,83 @@ export class ObjectItem extends HTMLElement {
 }
 
 
+export class AccountPermission extends HTMLElement {
+    constructor() {
+        super();
+    }
+
+    insertData(data)
+    {
+        this.data = data;
+    }
+
+    connectedCallback() 
+    {
+        this.render();
+        this.#elements();
+        this.#events();
+    }
+
+    render() 
+    {
+        this.innerHTML = `
+            <div class="account-owner-container">
+                <div class="table-user-circle flex-center">
+                    <i id="user-icon" class="bi bi-person-fill"></i>
+                </div>
+                <p>Kayleigh</p>
+            </div>
+            <p class="token-permissions">Read</p>
+            <p class="status">Active</p>
+        `
+    }
+
+    #elements()
+    {
+    }
+
+    #events()
+    {
+    }
+}
+
+
+export class APITokenItem extends HTMLElement {
+    constructor() {
+        super();
+    }
+
+    insertData(data)
+    {
+        this.data = data;
+    }
+
+    connectedCallback() 
+    {
+        this.render();
+        this.#elements();
+        this.#events();
+    }
+
+    render() 
+    {
+        this.innerHTML = `
+            <p class="token">jfioefjow^7d...</p>
+            <p class="token-permissions">Read</p>
+            <p class="creation">07-06-2024</p>
+        `
+    }
+
+    #elements()
+    {
+    }
+
+    #events()
+    {
+    }
+}
+
+                                
 
 
 /**
@@ -148,10 +225,10 @@ export class ObjectItem extends HTMLElement {
  * @param { Element } item 
  */
 function highlightItem(event, item)
-    {
-        if (event.target.checked) {
-            item.style.backgroundColor = 'var(--selected)';
-        } else {
-            item.style.backgroundColor = '';
-        }
+{
+    if (event.target.checked) {
+        item.style.backgroundColor = 'var(--selected)';
+    } else {
+        item.style.backgroundColor = '';
     }
+}

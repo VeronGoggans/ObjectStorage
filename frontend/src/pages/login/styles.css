@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: end;
-    background: url(../../assets/HomeCloud_background_image.jpeg) no-repeat;
+    background: url(.\frontend\public\HomeCloud_background_image.jpeg) no-repeat;
     background-size: cover;
 }
 

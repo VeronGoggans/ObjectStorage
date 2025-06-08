@@ -1,4 +1,5 @@
-import { pageTitle, pageSubtitle } from "../Application.js";
+import { pageTitle, pageSubtitle, modalWrapper } from "../Application.js";
+import { ModalComponentNames } from "../enums/Enums.js";
 
 
 export class MyBucketsPage extends HTMLElement {
@@ -8,7 +9,9 @@ export class MyBucketsPage extends HTMLElement {
 
     connectedCallback() 
     {
-        this.render();        
+        this.render();
+        this.#elements();
+        this.#events();        
     }
 
     render()
@@ -42,4 +45,14 @@ export class MyBucketsPage extends HTMLElement {
             </div>
         `
     }
+
+    #elements()
+    {   
+        this.addBucketButton = document.querySelector('.add-bucket-btn');
+    }
+
+    #events()
+    {
+        this.addBucketButton.addEventListener('click', () => modalWrapper.addModal(ModalComponentNames.BucketModal));
+    }   
 }

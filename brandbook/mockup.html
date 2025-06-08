@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../frontend/src/styling/sidebar.css">
     <link rel="stylesheet" href="../frontend/src/styling/pages.css">
     <link rel="stylesheet" href="../frontend/src/styling/components.css">
+    <link rel="stylesheet" href="../frontend/src/styling/modals.css">
     <link rel="stylesheet" href="./brandbook.css">
     
 
@@ -49,33 +50,20 @@
                 </div>
             </div>
             <div class="page">
-                <properties-page>
-                    <bucket-navigation></bucket-navigation>
-                    <div class="properties-container">
-                        <div class="overview-container">
-                            <h3>Overview</h3>
-                            <p>Objects <span class="soft">6</span></p>
-                            <p>Capacity <span class="soft">100mb</span></p>
-                            <p>Size <span class="soft">39.5mb</span></p>
-                            <p>Storage left <span class="soft">60.5mb</span></p>
-                            <p>Last accessed <span class="soft">27 April 2025  14:35</span></p>
-                            <p>Created at <span class="soft">26 April 2025  14:45</span></p>
-                            <p>Encryption <span class="soft">AES 256</span></p>
-                            <p>Logging <button class="btn2">Enabled</button></p>
-                        </div>
-                        <div class="email-container">
-                            <h3>Email notifications</h3>
-                            <p class="soft">Receive emails about important events tied to your account, buckets and objects.</p>
-                            <div class="email-input-container">
-                                <p>Receiving email</p>
-                                <input type="text" class="input1" placeholder="example@gmail.com">
-                            </div>
-                            <p>Emails <button class="btn2">Disabled</button></p>
-                        </div>
-                    </div>
-                </properties-page>
             </div>
         </main>
+        <modal-wrapper style="visibility: visible;">
+            <api-token-modal>
+                <h3>Add Token</h3>
+                <p class="soft modal-explenation">Programmaticaly access and manipulate your data via the HomeCloud REST API.</p>
+                <p class="modal-subtitle bold">Token writes</p>
+                <input type="text" class="input1 token-access-input" placeholder="Read:Write:Delete" spellcheck="false" maxlength="17">
+                <div class="buttons-container">
+                    <button class="btn2 cancel-btn">Cancel</button>
+                    <button class="btn2 add-button">Create</button>
+                </div>
+            </api-token-modal>
+        </modal-wrapper>
     </div>
 
     <script type="module" src="../frontend/src/core/Components.js"></script>

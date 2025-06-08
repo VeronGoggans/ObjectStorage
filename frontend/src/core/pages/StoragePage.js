@@ -35,7 +35,10 @@ export class StoragePage extends HTMLElement {
             <div class="storage-types flex-column">
                 <div class="storage-type document-type">
                     <div class="color-blob"></div>
-                    <p>Documents</p>
+                    <div>
+                        <p>Documents</p>
+                        <p>60 GB</p>
+                    </div>
                 </div>
                 <div class="storage-type image-type">
                     <div class="color-blob"></div>

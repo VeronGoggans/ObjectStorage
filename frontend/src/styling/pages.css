@@ -131,7 +131,7 @@ shared-with-me-page {
 }
 
 
-/*_____________________ Shared With Me Page _____________________*/
+/*_____________________ My Buckets Page _____________________*/
 .add-bucket-btn {
     margin-top: 40px;
     padding: 5px 10px;
@@ -142,7 +142,7 @@ shared-with-me-page {
     display: flex;
     margin-top: 25px;
     flex-direction: column;
-    height: fit-content;
+    max-height: calc(100dvh - 194px);
     width: 100%;
 }
 
@@ -155,6 +155,10 @@ shared-with-me-page {
 
 .my-buckets-header p {
     font-size: 14px;
+}
+
+.my-buckets-content {
+    overflow-y: scroll;
 }
 
 
@@ -210,8 +214,6 @@ bucket-navigation button:hover {
     display: flex;
     margin-top: 25px;
     flex-direction: column;
-    height: fit-content;
-    overflow-y: scroll;
     max-height: calc(100dvh - 305px);
     width: 100%;
 }
@@ -225,6 +227,10 @@ bucket-navigation button:hover {
 
 .bucket-object-header p {
     font-size: 14px;
+}
+
+.bucket-object-content {
+    overflow-y: scroll;
 }
 
 
@@ -262,4 +268,121 @@ properties-page {
 .email-input-container input {
     padding: 5px 20px;
     width: 300px;
+}
+
+
+/*_____________________ Permissions Page _____________________*/
+permissions-page {
+    display: grid;
+    grid-template-rows: 100px 1fr;
+}
+
+permissions-page h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.explenation {
+    max-width: 350px;
+    font-size: 14px;
+}
+
+.permissions-container {
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    height: calc(100dvh - 200px);
+}
+
+.image-container {
+    display: flex;
+    align-items: end;
+}
+
+.image-container img {
+    width: 100%;
+}
+
+.give-access-btn {
+    padding: 5px 20px;
+    margin-top: 10px;
+}
+
+.accounts-table {
+    display: flex;
+    margin-top: 25px;
+    flex-direction: column;
+    max-height: calc(100dvh - 329px);
+    width: 100%;
+}
+
+.accounts-table-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0 20px;
+    padding-bottom: 20px;
+}
+
+.accounts-table-header p {
+    font-size: 14px;
+}
+
+.accounts-table-content {
+    overflow-y: scroll;
+}
+
+
+/*_____________________ Access Page _____________________*/
+access-page {
+    display: grid;
+    grid-template-rows: 100px 1fr;
+}
+
+access-page h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.access-container {
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    height: calc(100dvh - 200px);
+}
+
+.image-container {
+    display: flex;
+    align-items: end;
+}
+
+.image-container img {
+    width: 100%;
+}
+
+.add-token-btn {
+    padding: 5px 20px;
+    margin-top: 10px;
+}
+
+.tokens-table {
+    display: flex;
+    margin-top: 25px;
+    flex-direction: column;
+    max-height: calc(100dvh - 329px);
+    width: 100%;
+}
+
+.tokens-table-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0 20px;
+    padding-bottom: 20px;
+}
+
+.tokens-table-header p {
+    font-size: 14px;
+}
+
+.tokens-table-content {
+    overflow-y: scroll;
 }

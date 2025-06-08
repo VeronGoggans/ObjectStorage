@@ -21,6 +21,7 @@ body {
     --blue3: #4A4FAC;
     --blue4: #1B1B74;
     --blue5: #96B3FF;
+    --green1: #61bd48;
 }
 
 
@@ -144,7 +145,7 @@ a:hover {
 button {
     border: none;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
     padding: 10px 20px;
     transition: background-color 0.2s ease, scale 0.1s ease-in-out;
 }
@@ -208,16 +209,6 @@ input::placeholder {
 .input1 {
     border-radius: 12px;
     background-color: var(--input1-bg);
-    border-bottom: 3px solid var(--input2-bg);
-}
-
-.input1:focus {
-    box-shadow: var(--input1-active-shadow);
-    border-color: var(--input-bg-focus);
-}
-
-.input1:hover {
-    border-color: var(--input-bg-hover);
 }
 
 .input2 {

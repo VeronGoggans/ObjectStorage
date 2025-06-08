@@ -195,3 +195,63 @@ object-item .date-time {
     font-size: 12px;
     margin: auto 0;
 }
+
+
+/*_____________________ Account Permissions Component _____________________*/
+account-permission {
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    cursor: pointer;
+    background-color: var(--soft-grey);
+    transition: background-color 200ms ease-in-out;
+}
+
+account-permission .account-owner-container {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+}
+
+account-permission p {
+    margin: auto 0;
+    font-size: 14px;
+}
+
+account-permission p.status {
+    color: var(--green1);
+    font-weight: 600;
+}
+
+account-permission:hover {
+    background-color: var(--selected);
+}
+
+
+/*_____________________ API Token Component _____________________*/
+api-token-item {
+    padding: 10px 20px;
+    border-radius: 10px;
+    height: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    cursor: pointer;
+    background-color: var(--soft-grey);
+    transition: background-color 200ms ease-in-out;
+}
+
+
+api-token-item p {
+    margin: auto 0;
+    font-size: 14px;
+}
+
+api-token-item p.status {
+    color: var(--green1);
+    font-weight: 600;
+}
+
+api-token-item:hover {
+    background-color: var(--selected);
+}

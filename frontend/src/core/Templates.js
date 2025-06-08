@@ -4,7 +4,9 @@ const notificationsTemplate = '<notifications-page></notifications-page>';
 const sharedWithMeTemplate = '<shared-with-me-page></shared-with-me-page>';
 const myBucketsTemplate = '<my-buckets-page></my-buckets-page>';
 const objectsTemplate = '<objects-page></objects-page>';
-const propertiesTemplate = '<properties-page></properties-page>'
+const propertiesTemplate = '<properties-page></properties-page>';
+const permissionsTemplate = '<permissions-page></permissions-page>';
+const accessTemplate = '<access-page></access-page>';
 
 
 export const pageTemplates = {
@@ -13,6 +15,8 @@ export const pageTemplates = {
     my_buckets: myBucketsTemplate,
     objects: objectsTemplate,
     properties: propertiesTemplate,
+    permissions: permissionsTemplate,
+    access: accessTemplate,
     shared_with_me: sharedWithMeTemplate,
     notifications: notificationsTemplate,
     trash: null,

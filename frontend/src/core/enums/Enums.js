@@ -1,3 +1,4 @@
+
 export const PageIds = {
 
     HOME: 'home',
@@ -20,7 +21,9 @@ export const PageComponentNames = {
     TrashPage: 'trash-page',
     StoragePage: 'storage-page',
     ObjectsPage: 'objects-page',
-    PropertiesPage: 'properties-page'
+    PropertiesPage: 'properties-page',
+    PermissionsPage: 'permissions-page',
+    AccessPage: 'access-page'
 
 }
 
@@ -39,13 +42,24 @@ export const TableComponentNames = {
     BucketItem: 'bucket-item',
     TrashItem: 'trash-item',
     ObjectItem: 'object-item',
+    AccountPermissionItem: 'account-permission',
+    ApiTokenItem: 'api-token-item'
 
 }
 
 
 export const PageUtilComponentNames = {
 
-    BucketNavigation: 'bucket-navigation'
+    BucketNavigation: 'bucket-navigation',
+    ModalWrapper: 'modal-wrapper'
+
+}
+
+
+export const ModalComponentNames = { 
+    
+    BucketModal: 'bucket-modal',
+    ApiTokenModal: 'api-token-modal'
 
 }
 
